@@ -1,3 +1,8 @@
+v1.2.7 - 2026-01-05
+
+* [Updates](https://github.com/wekan/meteor-node-stubs/commit/82a6cb92af2d236e0d0f1d4bb69ed4d46e131695).
+  Thanks to xet7.
+
 v1.2.1 - 2022-03-17
 
 * Fix the missing dependencies.

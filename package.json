@@ -1,11 +1,17 @@
 {
   "name": "meteor-node-stubs",
-  "author": "Ben Newman <ben@meteor.com>",
   "description": "Stub implementations of Node built-in modules, a la Browserify",
   "version": "1.2.7",
   "main": "index.js",
   "license": "MIT",
   "homepage": "https://github.com/wekan/meteor-node-stubs/README.md",
+  "author": "Ben Newman <ben@meteor.com>",
+  "contributors": [
+    {
+      "name": "Lauri Ojansivu",
+      "url": "https://github.com/xet7"
+    }
+  ],
   "type": "commonjs",
   "scripts": {
     "prepare": "node scripts/build-deps.js"
