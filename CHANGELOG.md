@@ -1,3 +1,8 @@
+v1.2.8 - 2026-11-21
+
+* [Updated dependencies, and fixed Dependabot alerts](https://github.com/wekan/meteor-node-stubs/commit/6d1ed0e45214a084b91b45c1182859f1303e02ea).
+  Thanks to dependabot and xet7.
+
 v1.2.7 - 2026-01-05
 
 * [Updates](https://github.com/wekan/meteor-node-stubs/commit/82a6cb92af2d236e0d0f1d4bb69ed4d46e131695).
