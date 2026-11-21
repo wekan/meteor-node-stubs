@@ -14,16 +14,22 @@ var map = require("../map.json");
 // bundled. Note that these modules should not be `require`d at runtime,
 // but merely scanned at bundling time.
 
+// Old stubs are removed with the fs module itself rather than with rimraf:
+// that keeps this install-time script free of dependencies (rimraf 2 pulled in
+// glob, minimatch and brace-expansion, all with known vulnerabilities, and the
+// newest rimraf needs Node.js 20) so it runs on every Node.js Meteor uses.
 fs.mkdir(depsDir, function () {
-  require("rimraf")("deps/*.js", function (error) {
-    if (error) throw error;
-    Object.keys(map).forEach(function (id) {
-      fs.writeFileSync(
-        path.join(depsDir, id + ".js"),
-        typeof map[id] === "string"
-          ? "require(" + JSON.stringify(map[id]) + ");\n"
-          : ""
-      );
-    });
+  fs.readdirSync(depsDir).forEach(function (file) {
+    if (path.extname(file) === ".js") {
+      fs.unlinkSync(path.join(depsDir, file));
+    }
+  });
+  Object.keys(map).forEach(function (id) {
+    fs.writeFileSync(
+      path.join(depsDir, id + ".js"),
+      typeof map[id] === "string"
+        ? "require(" + JSON.stringify(map[id]) + ");\n"
+        : ""
+    );
   });
 });
