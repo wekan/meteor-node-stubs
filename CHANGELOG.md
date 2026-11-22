@@ -1,3 +1,8 @@
+Upcoming release
+
+* [ECDSA signatures use RFC 6979's k on every curve: elliptic 6.6.1 is vendored with the fix for GHSA-848j-6mx2-7j84, which has no fixed release](https://github.com/wekan/meteor-node-stubs/commit/f473298d6d737a5e7e39389c545893eb65f5a649).
+  Thanks to xet7.
+
 v1.2.8 - 2026-11-21
 
 * [Updated dependencies, and fixed Dependabot alerts](https://github.com/wekan/meteor-node-stubs/commit/6d1ed0e45214a084b91b45c1182859f1303e02ea).
