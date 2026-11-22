@@ -14,7 +14,8 @@
   ],
   "type": "commonjs",
   "scripts": {
-    "prepare": "node scripts/build-deps.js"
+    "prepare": "node scripts/build-deps.js",
+    "test": "node test/elliptic-rfc6979.js"
   },
   "dependencies": {
     "assert": "^2.1.0",
@@ -24,7 +25,7 @@
     "constants-browserify": "^1.0.0",
     "crypto-browserify": "^3.12.1",
     "domain-browser": "^4.23.0",
-    "elliptic": "^6.6.1",
+    "elliptic": "file:vendor/elliptic",
     "events": "^3.3.0",
     "https-browserify": "^1.0.0",
     "os-browserify": "^0.3.0",
@@ -50,6 +51,7 @@
     "constants-browserify",
     "crypto-browserify",
     "domain-browser",
+    "elliptic",
     "events",
     "https-browserify",
     "os-browserify",
@@ -84,5 +86,8 @@
   ],
   "bugs": {
     "url": "https://github.com/meteor/node-stubs/issues"
+  },
+  "overrides": {
+    "elliptic": "$elliptic"
   }
 }
